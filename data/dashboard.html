@@ -1,0 +1,234 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            display:flex;
+            background:#f4f6f9;
+        }
+
+        /* Sidebar */
+        .sidebar{
+            width:250px;
+            height:100vh;
+            background:#2c3e50;
+            color:#fff;
+            position:fixed;
+            left:0;
+            top:0;
+            padding-top:20px;
+        }
+
+        .sidebar h2{
+            text-align:center;
+            margin-bottom:30px;
+        }
+
+        .sidebar ul{
+            list-style:none;
+        }
+
+        .sidebar ul li{
+            padding:15px 20px;
+        }
+
+        .sidebar ul li:hover{
+            background:#34495e;
+        }
+
+        .sidebar ul li a{
+            color:#fff;
+            text-decoration:none;
+            display:block;
+        }
+
+        /* Main Content */
+        .main{
+            margin-left:250px;
+            width:calc(100% - 250px);
+        }
+
+        /* Header */
+        .header{
+            background:#fff;
+            padding:20px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            box-shadow:0 2px 5px rgba(0,0,0,.1);
+        }
+
+        .header h1{
+            color:#333;
+        }
+
+        .profile{
+            font-weight:bold;
+            color:#555;
+        }
+
+        /* Cards */
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:20px;
+            padding:20px;
+        }
+
+        .card{
+            background:#fff;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 2px 8px rgba(0,0,0,.1);
+        }
+
+        .card h3{
+            color:#666;
+            margin-bottom:10px;
+        }
+
+        .card p{
+            font-size:28px;
+            font-weight:bold;
+            color:#007bff;
+        }
+
+        /* Table */
+        .table-section{
+            padding:20px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:#fff;
+            box-shadow:0 2px 8px rgba(0,0,0,.1);
+        }
+
+        th, td{
+            padding:12px;
+            border:1px solid #ddd;
+            text-align:left;
+        }
+
+        th{
+            background:#007bff;
+            color:#fff;
+        }
+
+        tr:nth-child(even){
+            background:#f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>My Dashboard</h2>
+
+        <ul>
+            <li><a href="dashboard.html">🏠 Dashboard</a></li>
+            <li><a href="profile.html">👤 Profile</a></li>
+            <li><a href="about.html">ℹ️ About</a></li>
+            <li><a href="settings.html">⚙️ Settings</a></li>
+            <li><a href="contact.html">📞 Contact</a></li>
+            <li><a href="logout.html">🚪 Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <div class="header">
+            <h1>Dashboard</h1>
+            <div class="profile">
+                Welcome, Admin
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="cards">
+
+            <div class="card">
+                <h3>Total Users</h3>
+                <p>1,250</p>
+            </div>
+
+            <div class="card">
+                <h3>Orders</h3>
+                <p>580</p>
+            </div>
+
+            <div class="card">
+                <h3>Revenue</h3>
+                <p>$8,950</p>
+            </div>
+
+            <div class="card">
+                <h3>Messages</h3>
+                <p>42</p>
+            </div>
+
+        </div>
+
+        <!-- Table -->
+        <div class="table-section">
+
+            <h2 style="margin-bottom:15px;">Recent Users</h2>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Rahim</td>
+                    <td>rahim@example.com</td>
+                    <td>Active</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Karim</td>
+                    <td>karim@example.com</td>
+                    <td>Active</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Sadia</td>
+                    <td>sadia@example.com</td>
+                    <td>Inactive</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Nusrat</td>
+                    <td>nusrat@example.com</td>
+                    <td>Pending</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
